@@ -63,7 +63,7 @@ func handleTrigger(rw http.ResponseWriter, req *http.Request) {
 		}
 	})
 
-	if price < THRESHOLD {
+	if price <= THRESHOLD {
 		sendEmail(price, c)
 	}
 
